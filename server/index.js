@@ -4,8 +4,8 @@ const http = require('http')
 const { Server } = require('socket.io')
 const cors = require('cors')
 const mongoose = require('mongoose')
-const userRoutes = require('./Routes/userRoutes')
-const commentRoutes = require('./Routes/commentRoutes')
+const userRoutes = require('./routes/userRoutes')
+const commentRoutes = require('./routes/commentRoutes')
 
 require('dotenv').config()
 
