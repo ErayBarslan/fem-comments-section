@@ -238,7 +238,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
             width={32}
             height={32}
             src={comment.userAvatar}
-            className="avatar" />
+            className="avatar"
+            alt="" />
           <p
             className='name'
             onClick={(e) => {
@@ -306,7 +307,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
                 }
                 width={11}
                 height={11}
-                aria-hidden="true" />
+                aria-hidden="true"
+                alt="upvote" />
             </button>
             <span
               aria-label="likes"
@@ -323,7 +325,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
                 }
                 width={11}
                 height={3}
-                aria-hidden="true" />
+                aria-hidden="true"
+                alt="downvote" />
             </button>
           </div>
         </div>
@@ -339,7 +342,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
                 src="/icon-delete.svg"
                 width={12}
                 height={14}
-                aria-hidden="true" />
+                aria-hidden="true"
+                alt="" />
               <span className='response-txt delete'>Delete</span>
             </button>
 
@@ -349,7 +353,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
                   src="/icon-edit.svg"
                   width={14}
                   height={14}
-                  aria-hidden="true" />
+                  aria-hidden="true"
+                  alt="" />
                 <span className='response-txt edit'>Edit</span>
               </>) : (<>
                 <MdCancel
@@ -373,7 +378,8 @@ const Comment = ({ comment, getReplies, nestCountPassed, sendComment, users }) =
                 src="/icon-reply.svg"
                 width={14}
                 height={13}
-                aria-hidden="true" />
+                aria-hidden="true"
+                alt="" />
               <span className='response-txt'>Reply</span>
             </button>
           )}
