@@ -15,7 +15,7 @@ import io from "socket.io-client"
 
 const socket = io.connect(`${process.env.SOCKET_URL}`)
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch(`${process.env.API_URL}/comments`)
   const data = await res.json()
 
