@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const https = require('https')
+const http = require('http')
 const { Server } = require('socket.io')
 const cors = require('cors')
 const mongoose = require('mongoose')
@@ -12,7 +12,7 @@ require('dotenv').config()
 app.use(express.json({ limit: "2mb" }))
 app.use(cors())
 
-const server = https.createServer(app)
+const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
     origin: '*',
