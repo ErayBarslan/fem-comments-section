@@ -169,7 +169,8 @@ export default function Home({ fetchedComments, users }) {
                       src={user ? user.avatar : '/default-avatar.png'}
                       width={40}
                       height={40}
-                      className="form-avatar" />
+                      className="form-avatar"
+                      alt="" />
                   </div>
                   <div className='send-btn-holder'>
                     <button className={text ? 'send-btn' : 'send-btn disabled'} type="submit" disabled={!text}>send</button>
