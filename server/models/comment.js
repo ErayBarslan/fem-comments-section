@@ -24,11 +24,11 @@ const CommentSchema = new mongoose.Schema({
   },
   replyTo: {
     type: mongoose.Schema.ObjectId,
-    ref: 'Comment'
+    ref: 'comment'
   },
   replies: {
     type: [mongoose.Schema.ObjectId],
-    ref: 'Comment'
+    ref: 'comment'
   }
 }, { timestamps: true })
 
