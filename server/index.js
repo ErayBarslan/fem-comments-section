@@ -10,12 +10,14 @@ const commentRoutes = require('./routes/commentRoutes')
 require('dotenv').config()
 
 app.use(express.json({ limit: "2mb" }))
-app.use(cors())
+app.use(cors({
+  origin: 'https://fem-interactive-comments-section.vercel.app'
+}))
 
 const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: '*',
+    origin: 'https://fem-interactive-comments-section.vercel.app',
     methos: ['GET', 'POST', 'PATCH', 'DELETE']
   }
 })
