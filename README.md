@@ -6,7 +6,7 @@ This is a solution to the <a href="https://www.frontendmentor.io/challenges/inte
 
 <div align="center">
   <h3>
-    <a href="https://fem-comments-section.vercel.app">
+    <a href="https://fem-interactive-comments-section.vercel.app">
       Live
     </a>
     <span> | </span>
