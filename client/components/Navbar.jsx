@@ -59,13 +59,13 @@ const Navbar = ({ setRenderIndex, renderIndex }) => {
     <StyledContainer>
       <div className={scrolled <= 5 ? 'container' : 'container scrolled'}>
         <div className='inner-container'>
-          <header>
+          <div>
             <div className="logo" role="heading" aria-level="1" onClick={() => setParentId(undefined)}>
               <Link href="/"><a>
                 <Image src="/logo.svg" alt="comment section" width={148} height={40} />
               </a></Link>
             </div>
-          </header>
+          </div>
           <nav className='nav-container'>
             {user ? (<>
 
@@ -141,7 +141,7 @@ const Navbar = ({ setRenderIndex, renderIndex }) => {
   )
 }
 
-const StyledContainer = styled.div`
+const StyledContainer = styled.header`
 position: fixed;
 z-index: 3;
 width: 100%;
