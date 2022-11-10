@@ -186,7 +186,7 @@ export default function Home({ fetchedComments, users }) {
 
 const StyledContainer = styled.main`
 margin-top: 64px;
-margin-bottom: 32px;
+margin-bottom: 64px;
 width: 100%;
 
 .comment-area {
