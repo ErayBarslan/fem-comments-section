@@ -12,7 +12,7 @@ require('dotenv').config()
 app.use(express.json({ limit: "2mb" }))
 app.use(cors())
 
-const server = http.createServer(app)
+const server = http.createServer()
 const io = new Server(server, {
   cors: {
     origin: '*',
