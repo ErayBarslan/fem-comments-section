@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const https = require('https')
+const http = require('http')
 const { Server } = require('socket.io')
 const cors = require('cors')
 const mongoose = require('mongoose')
@@ -12,7 +12,7 @@ require('dotenv').config()
 app.use(express.json({ limit: "2mb" }))
 app.use(cors())
 
-const server = https.createServer(app)
+const server = http.createServer(app)
 const io = new Server(server, {
   cors: {
     origin: '*',
@@ -28,6 +28,10 @@ io.on("connection", (socket) => {
   })
 })
 
+server.listen(process.env.ENV_SOCKET_PORT, () => {
+  console.log(`listening on port ${process.env.ENV_SOCKET_PORT}...`)
+})
+
 app.get('/', (req, res) => res.send('Comment Section API'))
 
 app.use(`/api/user`, userRoutes)
@@ -35,8 +39,8 @@ app.use(`/api/comments`, commentRoutes)
 
 mongoose.connect(process.env.ENV_MONGO_URI)
   .then(() => {
-    server.listen(process.env.ENV_PORT, () => {
-      console.log('listening...')
+    app.listen(process.env.ENV_SERVER_PORT, () => {
+      console.log(`listening on port ${process.env.ENV_SERVER_PORT}...`)
     })
   })
   .catch(error => console.log(error))
